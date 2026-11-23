@@ -140,28 +140,25 @@ export class CourtyardScene extends Phaser.Scene {
   private drawFloor() {
     const g = this.add.graphics().setDepth(LAYERS.floor);
     const top = 240;
+    const cx = W / 2;
     g.fillGradientStyle(0xc2b0e6, 0xc2b0e6, 0x8a74d0, 0x8a74d0, 1).fillRect(0, top, W, H - top);
-    // perspective diagonal tile grid, vanishing toward horizon
-    const vpY = -900, cx = W / 2;
-    g.lineStyle(1.2, 0x7a63c0, 0.28);
-    const toY = (t: number) => top + (H - top) * t * t * 0.4 + (H - top) * 0.6 * t;
-    for (let k = -40; k <= 40; k++) {
-      for (const dir of [-1, 1]) {
-        // diagonal lines expressed as rays from a vanishing point offset to each side
-        const bx = cx + k * 110, vx = cx + dir * 3000;
-        const t0 = (top - vpY) / (H - vpY);
-        g.beginPath();
-        g.moveTo(vx + (bx - vx) * t0, top);
-        g.lineTo(bx, H);
-        g.strokePath();
-      }
+    // Parallel diamond paving reads as an overhead play space under character sprites.
+    const tile = 112;
+    g.lineStyle(1.2, 0x7a63c0, 0.2);
+    for (let offset = top - W; offset <= H; offset += tile) {
+      const x0 = Math.max(0, top - offset);
+      const x1 = Math.min(W, H - offset);
+      if (x0 <= x1) g.lineBetween(x0, x0 + offset, x1, x1 + offset);
     }
-    g.lineStyle(1, 0xffffff, 0.12);
-    for (let i = 1; i < 14; i++) { const y = toY(i / 14); g.lineBetween(0, y, W, y); }
+    for (let offset = top; offset <= W + H; offset += tile) {
+      const x0 = Math.max(0, offset - H);
+      const x1 = Math.min(W, offset - top);
+      if (x0 <= x1) g.lineBetween(x0, offset - x0, x1, offset - x1);
+    }
     // gloss sheen
     g.fillStyle(0xffffff, 0.08).fillEllipse(cx, 420, 1500, 220);
     // back curved edge shadow along wall base
-    g.fillStyle(0x6a52b0, 0.35);
+    g.fillStyle(0x6a52b0, 0.28);
     g.fillPoints([{ x: 0, y: 345 }, { x: 215, y: 300 }, { x: 690, y: 250 }, { x: 975, y: 250 }, { x: 1455, y: 302 }, { x: W, y: 345 }, { x: W, y: 360 }, { x: 975, y: 262 }, { x: 690, y: 262 }, { x: 0, y: 360 }] as Phaser.Math.Vector2[], true);
   }
 
