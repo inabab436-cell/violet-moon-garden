@@ -1,29 +1,19 @@
-# Welcome to your Lovable project
+# Moonlit Violet Courtyard
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+A responsive, full-screen 2D courtyard scene rendered with Phaser. The environment is drawn in layered graphics, with a walkable floor polygon and camera framing for phone and landscape screens.
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Install dependencies and start the local preview:
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+bun install
+bun run dev
 ```
 
 ## Built with
 
 - TanStack Start
-- TypeScript
-- React
+- React and TypeScript
+- Phaser
 - Tailwind CSS

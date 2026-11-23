@@ -74,8 +74,8 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --background: oklch(0.16 0.005 300);
+  --foreground: oklch(0.97 0.02 300);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
@@ -109,8 +109,8 @@
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
+  --background: oklch(0.16 0.005 300);
+  --foreground: oklch(0.97 0.02 300);
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
   --popover: oklch(0.208 0.042 265.755);
@@ -151,5 +151,29 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+  }
+}
+
+.courtyard-loader {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--foreground);
+  opacity: 0.6;
+  animation: courtyard-loading 2s ease-in-out infinite;
+}
+
+@keyframes courtyard-loading {
+  50% {
+    transform: rotate(90deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .courtyard-loader {
+    animation: none;
   }
 }

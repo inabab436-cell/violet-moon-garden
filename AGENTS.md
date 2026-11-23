@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Keep the Phaser scene in `src/game` behind a lazy route and dynamic imports, because Phaser must only run in the browser.
+- Preserve the shared camera sizing in `viewport.ts` and the 1672×941 scene frame so portrait and landscape screens stay filled.
+- Keep environment depth tied to ground-contact Y and use the `WALKABLE` polygon for floor bounds, so later characters can sort and move correctly.

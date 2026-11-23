@@ -1,0 +1,103 @@
+{
+  "source": "https://github.com/inabab436-cell/moonlit-violet-courtyard.git",
+  "capabilities": [
+    {
+      "capability": "application code",
+      "source": "Public GitHub repository; TanStack Start and Phaser courtyard game",
+      "outcome": "Copy the game experience into this app while retaining its existing TanStack foundation.",
+      "status": "migrated",
+      "next_action": "None."
+    },
+    {
+      "capability": "database schema",
+      "source": "No schema or database configuration detected",
+      "outcome": "No database migration required.",
+      "status": "not_applicable",
+      "next_action": "None."
+    },
+    {
+      "capability": "application records",
+      "source": "No data store or record export detected",
+      "outcome": "No application records to import.",
+      "status": "not_applicable",
+      "next_action": "None."
+    },
+    {
+      "capability": "authentication identities",
+      "source": "No authentication implementation detected",
+      "outcome": "No user accounts to migrate.",
+      "status": "not_applicable",
+      "next_action": "None."
+    },
+    {
+      "capability": "authorization",
+      "source": "No role or permission logic detected",
+      "outcome": "No access rules to migrate.",
+      "status": "not_applicable",
+      "next_action": "None."
+    },
+    {
+      "capability": "uploaded file bytes",
+      "source": "No application media files detected; the courtyard is drawn in Phaser code",
+      "outcome": "No uploaded files to transfer.",
+      "status": "not_applicable",
+      "next_action": "None."
+    },
+    {
+      "capability": "external providers",
+      "source": "No external service integrations detected",
+      "outcome": "No providers to reconnect.",
+      "status": "not_applicable",
+      "next_action": "None."
+    },
+    {
+      "capability": "public endpoints",
+      "source": "No application API endpoints detected",
+      "outcome": "No public endpoints to migrate.",
+      "status": "not_applicable",
+      "next_action": "None."
+    },
+    {
+      "capability": "callbacks",
+      "source": "No OAuth or external callbacks detected",
+      "outcome": "No callbacks to migrate.",
+      "status": "not_applicable",
+      "next_action": "None."
+    },
+    {
+      "capability": "webhooks",
+      "source": "No webhooks detected",
+      "outcome": "No webhooks to migrate.",
+      "status": "not_applicable",
+      "next_action": "None."
+    },
+    {
+      "capability": "schedules",
+      "source": "No scheduled jobs detected",
+      "outcome": "No schedules to migrate.",
+      "status": "not_applicable",
+      "next_action": "None."
+    },
+    {
+      "capability": "secrets",
+      "source": "No secret variables detected",
+      "outcome": "No secrets required for the browser-only game.",
+      "status": "not_applicable",
+      "next_action": "None."
+    },
+    {
+      "capability": "cutover",
+      "source": "GitHub repository supplied as the code source",
+      "outcome": "Copy the current app without changing the source repository or its users.",
+      "status": "not_applicable",
+      "next_action": "None."
+    },
+    {
+      "capability": "verification",
+      "source": "Target app preview and existing test setup",
+      "outcome": "The courtyard rendered in portrait and landscape without page errors; all three framing and routing tests passed.",
+      "status": "verified",
+      "next_action": "None."
+    }
+  ]
+}
